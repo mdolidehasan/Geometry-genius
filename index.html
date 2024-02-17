@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry gen</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="">
+  <header>
+
+  </header>
+  <main class="m-6">
+    <div class="flex flex-col md:flex-row lg:flex-row p-4 justify-around">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Triangle</h2>
+              <p class="mx-auto">Area (A) = 0.5 X b X h </p>
+              <div class="flex mx-auto">
+                <input id="t-base" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="b" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="t-height" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="h" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Rectangle</h2>
+              <p class="mx-auto">Area (A) = w X l </p>
+              <div class="flex mx-auto">
+                <input id="r-width" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="w" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="r-length" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="l" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateRectArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Parallelogram</h2>
+              <p class="mx-auto">Area (A) = b X h </p>
+              <div class="flex mx-auto">
+                <input id="para-base" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="b" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="para-height" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="h" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="flex mx-auto">
+                <p class="text-base">b = 10cm, h = 12cm</p>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateParaArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>      
+      <div class="w-96 h-96 border-2 border-gray-700 rounded-md">
+        <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row lg:flex-row p-4 justify-around">
+        <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/rhombus.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Rhombus</h2>
+              <p class="mx-auto">Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub> </p>
+              <div class="mx-auto">
+                <p class="text-base">d1 = 16cm, d2 = 8cm</p>
+              </div>
+              <div class="flex mx-auto">
+                <input id="r-d1" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="d1" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="r-d2" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="d2" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateRhomArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/pentagon.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Pentagon</h2>
+              <p class="mx-auto">Area (A) = 0.5 X p X b </p>
+              <div class="mx-auto">
+                <p class="text-base">p = 6cm, b = 10cm</p>
+              </div>
+              <div class="flex mx-auto">
+                <input id="" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="p" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="b" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateRectArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+          <div class="card card-compact w-96 bg-base-100 shadow-xl p-4">
+            <figure><img src="images/ellipse.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title mx-auto">Ellipse</h2>
+              <p class="mx-auto">Area (A) = rab </p>
+              <div class="flex mx-auto">
+                <input id="" class="border-2 p-1 w-24 rounded-md" type="number" name="" placeholder="a" id="">
+                <span class="mr-2 ml-2">cm</span>
+                <input id="" class="border-2 p-1 w-24 rounded-md" type="number" placeholder="b" id="">
+                <span class="mr-2 ml-2">cm</span>
+              </div>
+              <div class="flex mx-auto">
+                <p class="text-base">a = 10cm, b = 12cm</p>
+              </div>
+              <div class="card-actions mt-4">
+                <button onclick="calculateArea()" class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>      
+      <div class="w-96 h-96 border-2 border-gray-700 rounded-md ">
+        <h3 class="text-3xl text-center p-4">Area Calculation</h3>
+      </div>
+    </div>
+  </main>
+  <script src="calculate.js"></script>
+</body>
+
+</html>
